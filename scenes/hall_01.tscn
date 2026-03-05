@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cerfgmqotaofx"]
+
+[ext_resource type="Script" uid="uid://emjapcvha8j8" path="res://hall_01.gd" id="1_cejia"]
+[ext_resource type="PackedScene" uid="uid://bjs1u1lgq4vnj" path="res://scenes/player.tscn" id="2_elr6s"]
+[ext_resource type="PackedScene" uid="uid://blsghkkq4iqpi" path="res://scenes/enemy.tscn" id="3_jxslt"]
+[ext_resource type="PackedScene" uid="uid://bj3k8xar47xo1" path="res://scenes/gun_pickup.tscn" id="4_e2qwj"]
+[ext_resource type="Script" uid="uid://3gvl500whtf0" path="res://ladder.gd" id="5_umqnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5mhv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cejia"]
+size = Vector2(2000, 20)
+
+[node name="Hall_01" type="Node2D" unique_id=2051453125]
+script = ExtResource("1_cejia")
+
+[node name="player" parent="." unique_id=1421000511 instance=ExtResource("2_elr6s")]
+
+[node name="enemy" parent="." unique_id=1139858270 instance=ExtResource("3_jxslt")]
+
+[node name="GunPickup" parent="." unique_id=824953651 instance=ExtResource("4_e2qwj")]
+
+[node name="Ladder" type="Area2D" parent="." unique_id=702082861]
+script = ExtResource("5_umqnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ladder" unique_id=928843234]
+shape = SubResource("RectangleShape2D_o5mhv")
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1278859900]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1474621125]
+position = Vector2(1, 77)
+shape = SubResource("RectangleShape2D_cejia")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=1992601954]

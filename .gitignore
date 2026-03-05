@@ -1,0 +1,21 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+*.uid
+
+# Logs and crashes
+*.log
+*.crash
+
+# Exported binaries
+/export/
+*.exe
+*.zip
+*.tar.gz
+*.app
+*.apk
+*.ipa
+
+# OS specific
+.DS_Store
+Thumbs.db

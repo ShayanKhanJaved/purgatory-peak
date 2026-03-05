@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://blsghkkq4iqpi"]
+
+[ext_resource type="Script" uid="uid://7wbv7h63v47j" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="Texture2D" uid="uid://ki73hyb4fqvy" path="res://assets/sprites/Bringer-Of-Death/Individual Sprite/Attack/Bringer-of-Death_Attack_5.png" id="2_5uy6h"]
+[ext_resource type="Texture2D" uid="uid://u77x1q07tk4t" path="res://assets/sprites/Bringer-Of-Death/Individual Sprite/Death/Bringer-of-Death_Death_8.png" id="3_c4w8v"]
+[ext_resource type="Texture2D" uid="uid://dnw31otymxv16" path="res://assets/sprites/Bringer-Of-Death/Individual Sprite/Walk/Bringer-of-Death_Walk_1.png" id="4_xwavj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nenq2"]
+atlas = ExtResource("2_5uy6h")
+region = Rect2(0, 0, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md484"]
+atlas = ExtResource("3_c4w8v")
+region = Rect2(70, 0, 70, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipns3"]
+atlas = ExtResource("4_xwavj")
+region = Rect2(70, 0, 70, 93)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8qclf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nenq2")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md484")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipns3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7xaro"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7k104"]
+radius = 150.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
+
+[node name="enemy" type="CharacterBody2D" unique_id=1139858270]
+script = ExtResource("1_7p1mj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1442929417]
+sprite_frames = SubResource("SpriteFrames_8qclf")
+animation = &"death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1141296382]
+shape = SubResource("CapsuleShape2D_7xaro")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=348110770]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=242925966]
+shape = SubResource("CircleShape2D_7k104")
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=1017007116]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=923035693]
+shape = SubResource("RectangleShape2D_4gyqm")
