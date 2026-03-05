@@ -6,7 +6,7 @@ Purgatory Peak is a 2D survival game where players must survive high-stakes enco
 - **Objective**: Surive the hostile sprites and gather coins.
 - **Controls**: WASD/Arrow keys to move.
 
-![Gameplay Screenshot]([IMAGE_URL_PLACEHOLDER])
+![Gameplay Screenshot]([])
 *(Gameplay photo to be uploaded later)*
 
 ## Installation and Execution (Ubuntu)
@@ -34,4 +34,4 @@ To run this Godot game on Ubuntu, follow these steps:
 This project is open-source and free to use. See [OPEN_SOURCE.md](OPEN_SOURCE.md) for the full argument and license information.
 
 ---
-Developed by [User's Name/Github Handle]
+Developed by [Cameosky/https://github.com/ShayanKhanJaved]
