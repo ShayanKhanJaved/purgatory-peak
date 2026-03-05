@@ -13,11 +13,13 @@ Purgatory Peak is a 2D survival game where players must survive high-stakes enco
 
 To run this Godot game on Ubuntu, follow these steps:
 
-1.  **Install dependencies**:
+1.  **Clone the repository**:
     ```bash
-    sudo apt update
-    sudo apt install -y g++ mesa-utils x11-utils libasound2-dev libudev-dev libxi-dev libxcursor-dev libxinerama-dev libxrandr-dev
+    git clone https://github.com/ShayanKhanJaved/purgatory-peak.git
+    cd purgatory-peak
     ```
+
+2.  **Install dependencies**:
 
 2.  **Download Godot Engine**:
     Download the Godot Engine 4 (Linux 64-bit) from the [official website](https://godotengine.org/download/linux/).
