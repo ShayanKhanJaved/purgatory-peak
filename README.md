@@ -9,7 +9,7 @@ Purgatory Peak is a 2D survival game where players must survive high-stakes enco
 ![Gameplay Screenshot](screenshots/demo.png)
 *(Gameplay demo)*
 
-## Installation and Execution (Ubuntu)
+## Installation and Execution
 
 To run this Godot game, follow these steps:
 
