@@ -6,8 +6,8 @@ Purgatory Peak is a 2D survival game where players must survive high-stakes enco
 - **Objective**: Surive the hostile sprites and gather coins.
 - **Controls**: WASD/Arrow keys to move.
 
-![Gameplay Screenshot]([])
-*(Gameplay photo to be uploaded later)*
+![Gameplay Screenshot](screenshots/demo.png)
+*(Gameplay demo)*
 
 ## Installation and Execution (Ubuntu)
 
